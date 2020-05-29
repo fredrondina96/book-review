@@ -8,6 +8,10 @@ class Book
     book = Book.new(data[:docs].first)
   end
 
+  def reviews
+    Review.load_reviews(title)
+  end
+
   attr_reader :title, :author, :publisher
   def initialize(book_info)
     @title = book_info[:title_suggest]
