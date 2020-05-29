@@ -1,1 +1,8 @@
-<%binding.pry%>
+
+<h3>Title = <%=@book.title%> </h3>
+<h4>Author = <%=@book.author.first%> </h4><br>
+<h4>Publishers <%@book.publisher.each do |publisher|%> </h4>
+  <p><%=publisher%>,</p>
+<%end%>
+
+<h3>Reviews</h3>
